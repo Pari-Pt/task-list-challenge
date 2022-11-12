@@ -1,16 +1,35 @@
 import React, { useState, useEffect } from "react";
+import TaskList from "./TaskList.js";
+import Home from "./Home.js";
 import "./App.css";
 
 export default function App() {
 
     const [result, setResult] = useState([]);
     const [fetched, setFetched] = useState(false);
-    let status = "";
-  
+    const [homeDisplay, setHomeDisplay] = useState(true);
+    const [taskDisplay, setTaskDisplay] = useState(false);
 
-    useEffect(() => {
+
+
+    function handleTasksClick(event) {
+      event.preventDefault();
+      console.log("CLICK")
+      setTaskDisplay(true);
+      setHomeDisplay(false);
+    }
+
+
+    function handleHomeClick(event) {
+      event.preventDefault();
+      console.log("home click");
+      setHomeDisplay(true);
+      setTaskDisplay(false);
+    }
+   
+
+      useEffect(() => {
       fetch("http://localhost:3008/api/tasks/").then(response => response.json()).then(response => {
-          console.log(response)
           
           if (response.length > 0) {
               setResult(response);
@@ -19,30 +38,25 @@ export default function App() {
       }
       }).then(setFetched(true))
     }, []);
-    
-    console.log(result);
+ 
+ 
     if (fetched) {
+
       return (
         <div className="App">
-        <header className="App-header">
-          <p>Test To-Do List</p>
+          <header className="App-header">
+            <h1>New App</h1>
           </header>
-          <ul className="App-list">
-          {result.map(function(task, index) {
-            if (task.completed === false) {
-              status = "Incomplete";
-              //listItem.classList.add("red");
-            } else {
-              status = "Complete";
-              
-            }
-            //console.log(task);
-      return (
-          <li key={index} id="listItem" className={task.completed === false ? "red" : "green"} >{task.text}---{status}</li>
+          <section className="App-sidebar">
+            <menu className="App-menu">
+              <li className="menu-item pt-4 pb-4" onClick={handleHomeClick}>Home</li>
+              <li className="menu-item pt-4 pb-4" onClick={handleTasksClick}>Tasks</li>
+              <li className="menu-item pt-4 pb-4">Back to Top</li>
+            </menu>
+          </section>
+          <Home display={homeDisplay}/>        
+          <TaskList result={result} display={taskDisplay}/>
+        </div>
       );
-    })}
-    </ul>
-    </div>
-    );
-  }
+    }
 }

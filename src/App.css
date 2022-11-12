@@ -1,22 +1,37 @@
+html {
+  overflow:scroll;
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 10vh;
+  min-height: 15vh;
   display: flex;
+  width: 100vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  position: fixed;
 }
 
 
-.App ul {
+
+
+
+.App-list-section {
   text-align: left;
   margin-left: 360px;
+  width: fit-content;
+  padding-top: 120px;
+}
+
+ul.App-list{
+  padding: 30px;
+}
+
+.App-list li{
+  margin-bottom: 6px;
 }
 
 .red {
@@ -27,6 +42,45 @@
   color: green;
 }
 
-.App-list {
-  border: 5px solid red;
+
+
+.App-sidebar {
+  margin-top: 15vh;
+  width: 15vw;
+  position: fixed;
+  height: 100vh;
+  background-color: #282c34;
+}
+
+.App-menu {
+ list-style-type: none;
+ font-size: 30px;
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ margin: auto;
+ padding: 0;
+}
+
+.App-menu li {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 100%;
+  text-align: center;
+}
+
+.App-menu a, .App-menu li{
+  text-decoration: none;
+  color: white;
+
+}
+
+.Home {
+  padding-top: 180px;
+  color: red;
+  border: 1px solid red;
+  text-align: left;
+  width: 200px;
+  margin-left: 360px;
+  width: 80vw;
 }
