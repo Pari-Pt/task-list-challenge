@@ -80,10 +80,10 @@
   /* HOME AREA CSS */
   
   .Home-main-area{
-    padding-top: 18rem;
+    padding-top: 16rem;
     text-align: left;
     width: 20rem;
-    margin-left: 36rem;
+    margin-left: 30rem;
     width: 80vw;
   }
   
@@ -106,7 +106,7 @@
     text-align: left;
     margin-left: 30rem;
     width: fit-content;
-    padding-top: 10rem;
+    padding-top: 16rem;
   }
   
   ul.Task-list {
