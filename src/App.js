@@ -35,14 +35,11 @@ export default function App() {
     }
 
       useEffect(() => {
-      fetch("http://localhost:3008/api/tasks/").then(response => response.json()).then(response => {
-          if (response.length > 0) {
-              setResult(response);
-      } else {
-          console.log("failed call");
-      }
-      }).then(setFetched(true))
-    }, []);
+        fetch("http://localhost:3008/api/tasks/").then(response => response.json())
+        .then(response => setResult(response))
+        .then(setFetched(true))
+        .catch(() => alert("An error occured and no tasks could be obtained"));
+      }, []);
  
  
     if (fetched) {
