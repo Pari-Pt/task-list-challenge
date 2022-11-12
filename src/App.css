@@ -111,13 +111,17 @@
   
   ul.Task-list {
     padding: 1rem;
-    font-size: 2.5rem;
   }
   
-  .Task-list li{
+  .Task-list li {
     margin-bottom: 0.6rem;
+    font-size: 2rem;
   }
-  
+
+  .Task-list-status {
+    font-size: 1.6rem;
+  }
+
   .red {
     color: red;
   }
