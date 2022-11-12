@@ -10,7 +10,7 @@ export default function TaskList(props) {
     if (display === true) {
         return(
             <section className="Task-list-section">
-                <h3 className="mt-4">Task List ({listLength} in total) </h3>
+                <h3 className="mt-4">Task List ({listLength} in total)</h3>
                 <ul className="Task-list">
                     {result.map(function(task, index) {
                         if (task.completed === false) {
@@ -19,7 +19,7 @@ export default function TaskList(props) {
                         status = "Complete";
                         }
                     return (
-                    <li key={index} className={task.completed === false ? "red" : "green"} >{task.text}---{status}</li>
+                    <li key={index}>{task.text}<span className={task.completed === false ? "Task-list-status red " : "Task-list-status green"}>-----{status}</span></li>
                     
                     );
                     })}

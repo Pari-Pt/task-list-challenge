@@ -1,5 +1,7 @@
 :root {
-  --font-color: white;
+  --primary-color: white;
+  --frame-color: #282c34;
+
   }
   
   * {
@@ -16,14 +18,10 @@
   /* HEADER CSS */
   
   .App-header {
-    background-color: #282c34;
+    background-color: var(--frame-color);
     min-height: 15vh;
     padding-top: 3rem;
-    /* display: flex; */
     width: 100%;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
     color: white;
     position: fixed;
     text-align: center;
@@ -42,7 +40,7 @@
     width: 15vw;
     position: fixed;
     height: 100%;
-    background-color: #282c34;
+    background-color: var(--frame-color);
   }
   
   .App-menu span {
@@ -107,6 +105,7 @@
     margin-left: 30rem;
     width: fit-content;
     padding-top: 16rem;
+ 
   }
   
   ul.Task-list {
@@ -117,19 +116,22 @@
   .Task-list li{
     margin-bottom: 0.6rem;
   }
+
+  span.Task-list-status {
+    font-size: 1.5rem;
+  }
   
   .red {
-    color: red;
+    color: rgb(252, 35, 72);
   }
   
   .green {
-    color: green;
+    color: rgb(6, 179, 6);
   }
   
   
   
   /* FOOTER AREA */
-  
   
   .author-para, .author-para a{
     font-size: 1.4rem;
@@ -151,6 +153,10 @@
     
     }
 
+    .Home-main-area{
+      margin-left: 20rem;
+    }
+
     .Task-list-section {
       margin-left: 20rem;
     }
@@ -159,12 +165,20 @@
 
   @media only screen and (max-width:500px) {
 
+    
+    .Home-main-area{
+      margin-left: 17rem;
+    }
+
     .Task-list-section {
       margin-left: 17rem;
     }
   }
 
   @media only screen and (max-width:425px) {
+    .Home-main-area{
+      margin-left: 17rem;
+    }
 
     .Task-list-section {
       margin-left: 10rem;
