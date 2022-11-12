@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-let status = "";
 
 
 export default function Tester(props) {
     let display = props.display;
     let result = props.result;
+    let status = "";
 
     if (display === true) {
         return(
