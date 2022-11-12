@@ -1,7 +1,6 @@
 :root {
   --primary-color: white;
   --frame-color: #282c34;
-
   }
   
   * {
@@ -82,6 +81,7 @@
     text-align: left;
     width: 20rem;
     margin-left: 30rem;
+    padding-right: 8rem;
     width: 80vw;
   }
   
@@ -105,7 +105,6 @@
     margin-left: 30rem;
     width: fit-content;
     padding-top: 16rem;
- 
   }
   
   ul.Task-list {
@@ -113,14 +112,14 @@
     font-size: 2.5rem;
   }
   
-  .Task-list li{
+  .Task-list li {
     margin-bottom: 0.6rem;
   }
 
-  span.Task-list-status {
-    font-size: 1.5rem;
+  .Task-list-status {
+    font-size: 1.6rem;
   }
-  
+
   .red {
     color: rgb(252, 35, 72);
   }
@@ -132,6 +131,7 @@
   
   
   /* FOOTER AREA */
+  
   
   .author-para, .author-para a{
     font-size: 1.4rem;
