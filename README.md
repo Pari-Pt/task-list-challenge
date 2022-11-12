@@ -1,3 +1,14 @@
+# Launching API
+Simple Tasks API (GET only)
+
+1.   npm install dotenv
+2.   npm run start-api
+
+PORT: App port, default 8080
+NEW_TASK_PERIOD: Period on which a new task is added to the list (in milliseconds), default: 60000
+You can access the API using: http://localhost:3008/api/tasks/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
