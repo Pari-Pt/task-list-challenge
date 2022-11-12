@@ -1,5 +1,6 @@
 :root {
-  --font-color: white;
+  --primary-color: white;
+  --frame-color: #282c34;
   }
   
   * {
@@ -16,14 +17,10 @@
   /* HEADER CSS */
   
   .App-header {
-    background-color: #282c34;
+    background-color: var(--frame-color);
     min-height: 15vh;
     padding-top: 3rem;
-    /* display: flex; */
     width: 100%;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
     color: white;
     position: fixed;
     text-align: center;
@@ -42,7 +39,7 @@
     width: 15vw;
     position: fixed;
     height: 100%;
-    background-color: #282c34;
+    background-color: var(--frame-color);
   }
   
   .App-menu span {
@@ -80,10 +77,11 @@
   /* HOME AREA CSS */
   
   .Home-main-area{
-    padding-top: 18rem;
+    padding-top: 16rem;
     text-align: left;
     width: 20rem;
-    margin-left: 36rem;
+    margin-left: 30rem;
+    padding-right: 8rem;
     width: 80vw;
   }
   
@@ -104,18 +102,18 @@
   
   .Task-list-section {
     text-align: left;
-    margin-left: 36rem;
+    margin-left: 30rem;
     width: fit-content;
-    padding-top: 12rem;
+    padding-top: 16rem;
   }
   
   ul.Task-list {
     padding: 1rem;
+    font-size: 2.5rem;
   }
   
   .Task-list li {
     margin-bottom: 0.6rem;
-    font-size: 2rem;
   }
 
   .Task-list-status {
@@ -123,11 +121,11 @@
   }
 
   .red {
-    color: red;
+    color: rgb(252, 35, 72);
   }
   
   .green {
-    color: green;
+    color: rgb(6, 179, 6);
   }
   
   
@@ -135,7 +133,7 @@
   /* FOOTER AREA */
   
   
-  .footer-para, .footer-para a{
+  .author-para, .author-para a{
     font-size: 1.4rem;
     color: rgb(0, 225, 255);
     text-align: center;
@@ -154,5 +152,35 @@
       display: none;
     
     }
+
+    .Home-main-area{
+      margin-left: 20rem;
+    }
+
+    .Task-list-section {
+      margin-left: 20rem;
+    }
   
+  }
+
+  @media only screen and (max-width:500px) {
+
+    
+    .Home-main-area{
+      margin-left: 17rem;
+    }
+
+    .Task-list-section {
+      margin-left: 17rem;
+    }
+  }
+
+  @media only screen and (max-width:425px) {
+    .Home-main-area{
+      margin-left: 17rem;
+    }
+
+    .Task-list-section {
+      margin-left: 10rem;
+    }
   }
