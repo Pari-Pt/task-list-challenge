@@ -6,14 +6,19 @@ export default function Home(props) {
     if (display === true) {
         return (
             <div className="Home">
-            <section className="Home-section">
-              <h2>Welcome to Home</h2>
-            </section>
-        
+                <main className="Home-main-area">
+                <h2 className="pb-5">Home</h2>
+                <h3 className="pb-5">Notices/Updates:</h3>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</li>
+                </ol>
+            </main>        
         </div>
         );
     } else {
-        return null
+        return null;
     }
-
 }

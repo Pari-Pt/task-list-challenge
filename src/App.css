@@ -1,86 +1,154 @@
-html {
-  overflow:scroll;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 15vh;
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  position: fixed;
-}
-
-
-
-
-
-.App-list-section {
-  text-align: left;
-  margin-left: 360px;
-  width: fit-content;
-  padding-top: 120px;
-}
-
-ul.App-list{
-  padding: 30px;
-}
-
-.App-list li{
-  margin-bottom: 6px;
-}
-
-.red {
-  color: red;
-}
-
-.green {
-  color: green;
-}
-
-
-
-.App-sidebar {
-  margin-top: 15vh;
-  width: 15vw;
-  position: fixed;
-  height: 100vh;
-  background-color: #282c34;
-}
-
-.App-menu {
- list-style-type: none;
- font-size: 30px;
- display:flex;
- flex-direction: column;
- align-items: center;
- margin: auto;
- padding: 0;
-}
-
-.App-menu li {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  width: 100%;
-  text-align: center;
-}
-
-.App-menu a, .App-menu li{
-  text-decoration: none;
-  color: white;
-
-}
-
-.Home {
-  padding-top: 180px;
-  color: red;
-  border: 1px solid red;
-  text-align: left;
-  width: 200px;
-  margin-left: 360px;
-  width: 80vw;
-}
+:root {
+  --font-color: white;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  html {
+    overflow:scroll;
+  }
+  
+  /* HEADER CSS */
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 15vh;
+    padding-top: 3rem;
+    /* display: flex; */
+    width: 100%;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    color: white;
+    position: fixed;
+    text-align: center;
+  
+  }
+  
+  .App-header h1 {
+    font-size: 4rem;
+  }
+  
+  
+  /* SIDEBAR CSS */
+  
+  .App-sidebar {
+    margin-top: 15vh;
+    width: 15vw;
+    position: fixed;
+    height: 100%;
+    background-color: #282c34;
+  }
+  
+  .App-menu span {
+   list-style-type: none;
+   font-size: 3rem;
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   padding: 0;
+  }
+  
+  .App-menu li {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .App-menu li:hover {
+    cursor: pointer;
+  }
+  
+  .App-menu, .App-menu li{
+    text-decoration: none;
+    color: white;
+  }
+  
+  li span.emoji {
+    visibility: hidden;
+    display: none;
+  }
+  
+  
+  /* HOME AREA CSS */
+  
+  .Home-main-area{
+    padding-top: 18rem;
+    text-align: left;
+    width: 20rem;
+    margin-left: 36rem;
+    width: 80vw;
+  }
+  
+  .Home-main-area h2 {
+    font-size: 3rem;
+  }
+  
+  .Home-main-area h3 {
+    font-size: 2rem;
+  }
+  
+  .Home-main-area li {
+    font-size: 1.8rem;
+  }
+  
+  
+  /* TASK LIST CSS */
+  
+  .Task-list-section {
+    text-align: left;
+    margin-left: 36rem;
+    width: fit-content;
+    padding-top: 12rem;
+  }
+  
+  ul.Task-list {
+    padding: 1rem;
+    font-size: 2.5rem;
+  }
+  
+  .Task-list li{
+    margin-bottom: 0.6rem;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  
+  
+  /* FOOTER AREA */
+  
+  
+  .footer-para, .footer-para a{
+    font-size: 1.4rem;
+    color: rgb(0, 225, 255);
+    text-align: center;
+  
+  }
+  /* MEDIA QUERY FOR SIDEBAR */
+  
+  @media only screen and (max-width:768px) {
+    li span.emoji {
+      visibility: visible;
+      display: inline-block;
+    }
+  
+    li span.menu-title {
+      visibility: hidden;
+      display: none;
+    
+    }
+  
+  }

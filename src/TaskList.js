@@ -1,31 +1,32 @@
 import React from "react";
 import "./App.css";
 
-
-export default function Tester(props) {
+export default function TaskList(props) {
     let display = props.display;
-    let result = props.result;
+    let listLength = props.result.length;
     let status = "";
+    let result = props.result;
 
     if (display === true) {
         return(
-            <section className="App-list-section">
-                <h3 className="mt-4">Task List:</h3>
-                <ul className="App-list">
-                {result.map(function(task, index) {
-                    if (task.completed === false) {
-                    status = "Incomplete";
-                    } else {
-                    status = "Complete";
-                    }
-                return (
+            <section className="Task-list-section">
+                <h3 className="mt-4">Task List ({listLength} in total) </h3>
+                <ul className="Task-list">
+                    {result.map(function(task, index) {
+                        if (task.completed === false) {
+                        status = "Incomplete";
+                        } else {
+                        status = "Complete";
+                        }
+                    return (
                     <li key={index} className={task.completed === false ? "red" : "green"} >{task.text}---{status}</li>
-                );
-                })}
+                    
+                    );
+                    })}
                 </ul>
             </section>
         );
     } else {
-        return null;
+        return null
     }
 }
