@@ -104,9 +104,9 @@
   
   .Task-list-section {
     text-align: left;
-    margin-left: 36rem;
+    margin-left: 30rem;
     width: fit-content;
-    padding-top: 12rem;
+    padding-top: 10rem;
   }
   
   ul.Task-list {
@@ -131,7 +131,7 @@
   /* FOOTER AREA */
   
   
-  .footer-para, .footer-para a{
+  .author-para, .author-para a{
     font-size: 1.4rem;
     color: rgb(0, 225, 255);
     text-align: center;
@@ -150,5 +150,23 @@
       display: none;
     
     }
+
+    .Task-list-section {
+      margin-left: 20rem;
+    }
   
+  }
+
+  @media only screen and (max-width:500px) {
+
+    .Task-list-section {
+      margin-left: 17rem;
+    }
+  }
+
+  @media only screen and (max-width:425px) {
+
+    .Task-list-section {
+      margin-left: 10rem;
+    }
   }
