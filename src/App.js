@@ -6,12 +6,8 @@ export default function App() {
     const [result, setResult] = useState([]);
     const [fetched, setFetched] = useState(false);
     let status = "";
-    let listItem = document.getElementsByClassName("task");
   
-    //const completion = [true, false];
-   // const [completion, setCompletion] = useState(" = ");
-   // console.log(list);
-  
+
     useEffect(() => {
       fetch("http://localhost:3008/api/tasks/").then(response => response.json()).then(response => {
           console.log(response)
