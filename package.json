@@ -1,5 +1,6 @@
 {
   "name": "task-list-challenge",
+  "homepage" : "https://pari-pt.github.io/task-list-challenge",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
