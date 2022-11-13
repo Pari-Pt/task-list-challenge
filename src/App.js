@@ -45,7 +45,7 @@ export default function App() {
               <li className="menu-item pt-4 pb-4" onClick={handleTasksClick}><span className="emoji">🧾</span><span className="menu-title">Tasks</span></li>
               <li className="menu-item pt-4 pb-4" onClick={backToTop}><span className="emoji">🔝</span><span className="menu-title">Back to Top</span></li>
             </menu>
-            <p className="author-para pt-5"><a href="/">Coded</a> by Pari Nathali</p>
+            <p className="author-para pt-5"><a href="https://pari-pt.github.io/task-list-challenge/">Coded</a> by Pari Nathali</p>
           </section>
           
           {homeDisplay && <Home display={homeDisplay}/>}    
